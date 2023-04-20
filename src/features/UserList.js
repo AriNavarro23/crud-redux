@@ -37,9 +37,9 @@ const UserList = () => {
     ))
 
     return (
-        <div>
+        <div className="flex justify-center items-center flex-col">
             <Link to="/add-user"><Button>Add User</Button></Link>
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid gap-5 md:grid-cols-2 w-full">
                 {users.length ? renderCard() : <p className="text-center col-span-2 text-gray-700 font-semibold">No User</p>}
             </div>
         </div>

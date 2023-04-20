@@ -25,7 +25,7 @@ const AddUser = () => {
     }
 
     return (
-        <div className="mt-10 max-w-xl mx-auto">
+        <div className="mt-10 max-w-xl mx-auto border border-indigo-2xl darken-6 p-4 rounded-md">
             <h1 className="text-center font-bold text-2xl text-gray-700">Add User</h1>
             <TextField
                 label="Name"
