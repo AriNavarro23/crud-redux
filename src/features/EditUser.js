@@ -1,23 +1,26 @@
 import { useState } from "react"
-import { useDispatch } from "react-redux"
-import { useNavigate } from "react-router-dom"
-import { v4 as uuidv4 } from 'uuid';
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate, useParams } from "react-router-dom"
 import Button from "../components/Button"
 import TextField from "../components/TextField"
-import { addUser } from "./userSlice"
+import { editUser } from "./userSlice"
 
-const AddUser = () => {
+const EditUser = () => {
+    const params = useParams();
     const dispatch = useDispatch();
+    const users = useSelector(store => store.users);
     const navigate = useNavigate();
+    const existingUser = users.filter(user => user.id === params.id);
+    const { name, email } = existingUser[0];
     const [values, setValues] = useState({
-        name: '',
-        email: ''
+        name,
+        email
     });
 
-    const handleAddUser = () => {
+    const handleEditUser = () => {
         setValues({ name: '', email: '' });
-        dispatch(addUser({
-            id: uuidv4(),
+        dispatch(editUser({
+            id: params.id,
             name: values.name,
             email: values.email
         }));
@@ -26,7 +29,6 @@ const AddUser = () => {
 
     return (
         <div className="mt-10 max-w-xl mx-auto">
-            <h1 className="text-center font-bold text-2xl text-gray-700">Add User</h1>
             <TextField
                 label="Name"
                 value={values.name}
@@ -40,9 +42,9 @@ const AddUser = () => {
                 onChange={(e) => setValues({ ...values, email: e.target.value })}
                 inputProps={{ type: 'email', placeholder: 'jhondoe@mail.com' }}
             />
-            <Button onClick={handleAddUser}>Submit</Button>
+            <Button onClick={handleEditUser}>Edit</Button>
         </div>
     )
 }
 
-export default AddUser
+export default EditUser
