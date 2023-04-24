@@ -22,7 +22,7 @@ const DarkModeButton = () => {
             onClick={toggleDarkMode}
         >
             {isDarkMode ? (
-                <FontAwesomeIcon icon={faSun} />
+                <FontAwesomeIcon icon={faSun} className='text-yellow-200' />
             ) : (
                 <FontAwesomeIcon icon={faMoon} />
             )}

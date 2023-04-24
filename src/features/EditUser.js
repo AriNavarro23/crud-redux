@@ -28,7 +28,7 @@ const EditUser = () => {
     }
 
     return (
-        <div className="mt-10 max-w-xl mx-auto">
+        <div className="mt-10 max-w-xl mx-auto border border-indigo-2xl dark:border-gray-400 darken-6 p-4 rounded-md">
             <TextField
                 label="Name"
                 value={values.name}
