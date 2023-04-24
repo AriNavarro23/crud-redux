@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    height: 100vh;
+    background-color: rgb(134, 137, 151);
+}
+
+#root .dark{
+    background-color: #edf2f7;
+}
