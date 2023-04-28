@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
 import Button from "../components/Button"
 import TextField from "../components/TextField"
@@ -70,7 +70,10 @@ const AddUser = () => {
                 isEmailValid={isEmailValid}
                 inputProps={{ type: 'email', placeholder: 'xxx@mail.com' }}
             />
-            <Button onClick={handleAddUser}>Submit</Button>
+            <div className="flex justify-between">
+                <Button onClick={handleAddUser}>Submit</Button>
+                <Link to='/'><button className="bg-indigo-600 text-white py-2 px-6 my-10 rounded hover:bg-indigo-700">Go back</button></Link>
+            </div>
         </div>
     )
 }

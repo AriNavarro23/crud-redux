@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 import Button from "../components/Button"
 import TextField from "../components/TextField"
 import { editUser } from "./userSlice"
@@ -11,7 +11,8 @@ const EditUser = () => {
     const users = useSelector(store => store.users);
     const navigate = useNavigate();
     const existingUser = users.filter(user => user.id === params.id);
-    const { name, email } = existingUser[0];
+    const { name, email } = existingUser.length > 0 ? existingUser[0] : { name: '', email: '' };
+
     const [values, setValues] = useState({
         name,
         email
@@ -42,7 +43,10 @@ const EditUser = () => {
                 onChange={(e) => setValues({ ...values, email: e.target.value })}
                 inputProps={{ type: 'email', placeholder: 'xxx@mail.com' }}
             />
-            <Button onClick={handleEditUser}>Edit</Button>
+            <div className="flex justify-between">
+                <Button onClick={handleEditUser}>Edit</Button>
+                <Link to='/'><button className="bg-indigo-600 text-white py-2 px-6 my-10 rounded hover:bg-indigo-700">Go back</button></Link>
+            </div>
         </div>
     )
 }
