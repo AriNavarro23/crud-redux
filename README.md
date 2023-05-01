@@ -1,4 +1,6 @@
 # Preview
+[Link DEMO](crud-redux-delta.vercel.app)
+
 
 ![Crud preview!](public/assets/video/CRUD-GIF.gif)
 
