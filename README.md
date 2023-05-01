@@ -1,6 +1,6 @@
 # Preview
 
-![Crud preview!](public/assets/video/Crud.gif)
+![Crud preview!](public/assets/video/CRUD-GIF.gif)
 
 
 ## Getting Started with Create React App
