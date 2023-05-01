@@ -1,5 +1,5 @@
 # Preview
-[Link DEMO](crud-redux-delta.vercel.app)
+[Link DEMO](https://crud-redux-e0nf17gcm-navarroaariel-hotmailcom.vercel.app)
 
 
 ![Crud preview!](public/assets/video/CRUD-GIF.gif)
