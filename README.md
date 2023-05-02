@@ -39,7 +39,7 @@ You may also see any lint errors in the console.
 
 ### `FontAwesome`
 
-### 'Tailwind'
+### `Tailwind`
 
 
 ## Learn More
