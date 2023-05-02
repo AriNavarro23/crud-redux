@@ -31,13 +31,15 @@ You may also see any lint errors in the console.
 
 ## Technologies and Libraries
 
-### `npm Install react-redux`
+### `React-redux`
 
-### `npm react-router-dom`
+### `React-router-dom`
 
-### `npm install uuidv4`
+### `uuidv4`
 
 ### `FontAwesome`
+
+### 'Tailwind'
 
 
 ## Learn More
